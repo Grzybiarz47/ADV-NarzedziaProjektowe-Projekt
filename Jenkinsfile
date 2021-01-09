@@ -9,7 +9,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''cd app
-g++ tests -lgtest -lgtest_main -lgmock -pthread -o tests
+g++ tests.cpp -lgtest -lgtest_main -lgmock -pthread -o tests
 ./tests'''
       }
     }
